@@ -158,43 +158,37 @@ void loop() {
 
 ### Led
 
-Su configuración es sencilla. Únicamente es necesario una resistencia de 220 ohmios y tener en cuenta cuál es el ánodo (donde conectas el positivo) y el cátodo (conectas el negativo).
+Su configuración es sencilla, unicamente es necesario una resistencia de 220 ohmios y tener en cuenta cuál es el ánodo (donde conectas el positivo) y el cátodo (conectas el negativo).
 
 ![Configuración LED](./conexionLED.png)
 
-### 🔢 Explicación teórica: la ley de Ohm
+## Explicación teórica mediante la ley de Ohm
 
-\[
-I = \frac{V}{R}
-\]
+**I = V / R**
 
 Donde:
 
-- \( I \) = corriente en amperios (A)  
-- \( V \) = voltaje aplicado (V)  
-- \( R \) = resistencia en ohmios (Ω)
+- **I** = corriente en amperios (A)  
+- **V** = voltaje aplicado (V)  
+- **R** = resistencia en ohmios (Ω)
 
 ---
 
 ### Desarrollo del cálculo
 
 - Tensión de salida del pin digital del Wemos D1:  
-  \( V = 3.3\,V \)
+  **V = 3.3 V**
 
 - Caída de tensión típica del LED (rojo):  
-  \( V_{LED} = 2.0\,V \)
+  **V_LED = 2.0 V**
 
 - Resistencia:  
-  \( R = 220\,\Omega \)
+  **R = 220 Ω**
 
 - Voltaje sobre la resistencia:  
-  \( V_R = V - V_{LED} = 3.3\,V - 2.0\,V = 1.3\,V \)
+  **V_R = V - V_LED = 3.3 V - 2.0 V = 1.3 V**
 
-\[
-I = \frac{1.3\,V}{220\,\Omega} \approx 0.0059\,A = 5.9\,mA
-\]
-
----
+**I = 1.3 V / 220 Ω ≈ 0.0059 A = 5.9 mA**
 
 Con esto sabemos que una resistencia de **220Ω** limita la corriente del LED a aproximadamente **5.9 mA**. El pin del microcontrolador no podría entrengar más de 12 mA de forma segura.
 
